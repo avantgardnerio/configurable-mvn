@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <profiles>
+        <profile>
+            <pluginRepositories>
+                <pluginRepository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>rms-plugins</id>
+                    <name>rms-plugin-snapshot</name>
+                    <url>${env.M2_REPO}</url>
+                </pluginRepository>
+                <pluginRepository>
+                    <snapshots/>
+                    <id>rms-plugin-snapshots</id>
+                    <name>rms-plugin</name>
+                    <url>${env.M2_REPO}</url>
+                </pluginRepository>
+            </pluginRepositories>
+            <repositories>
+                <repository>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <id>rms-java-libs</id>
+                    <url>${env.M2_REPO}</url>
+                </repository>
+            </repositories>
+            <id>rms-libs</id>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>rms-libs</activeProfile>
+    </activeProfiles>
+</settings>
